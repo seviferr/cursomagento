@@ -1,3 +1,4 @@
+process.env.DISABLE_NOTIFIER = true;
 /**
  * The MIT License (MIT)
  *
@@ -61,14 +62,14 @@ gulp.task('css', function() {
   }
 
   return stream
-    .pipe(gulp.dest('css'));
-    // .pipe(notify({ message: 'Successfully compiled LESS' }));
+    .pipe(gulp.dest('css'))
+    .pipe(notify({ message: 'Successfully compiled LESS' }));
 });
 
 // JS
 gulp.task('js', function() {
   var scripts = [
-    'bower_components/jquery/dist/jquery.js',
+    'bower_components/jquery/dist/jquery.min.js',
     'bower_components/bootstrap/js/transition.js',
     'bower_components/bootstrap/js/collapse.js',
     'bower_components/bootstrap/js/carousel.js',
@@ -81,8 +82,8 @@ gulp.task('js', function() {
     scripts.push('src/js/livereload.js');
   }
 
-  var stream = srcwebcom
-    .gulp(scripts)
+  var stream = gulp
+    .src(scripts)
     .pipe(concat('script.js'));
 
   if (config.uglifyJS === true) {
@@ -90,16 +91,16 @@ gulp.task('js', function() {
   }
 
   return stream
-    .pipe(gulp.dest('js'));
-    // .pipe(notify({ message: 'Successfully compiled JavaScript' }));
+    .pipe(gulp.dest('js'))
+    .pipe(notify({ message: 'Successfully compiled JavaScript' }));
 });
 
 // Images
 gulp.task('images', function() {
   return gulp
     .src('src/images/**/*')
-    .pipe(gulp.dest('images'));
-    // .pipe(notify({ message: 'Successfully processed image' }));
+    .pipe(gulp.dest('images'))
+    .pipe(notify({ message: 'Successfully processed image' }));
 });
 
 // Fonts
@@ -109,8 +110,8 @@ gulp.task('fonts', function() {
       'bower_components/bootstrap/fonts/**/*',
       'bower_components/font-awesome/fonts/**/*'
     ])
-    .pipe(gulp.dest('fonts'));
-    // .pipe(notify({ message: 'Successfully processed font' }));
+    .pipe(gulp.dest('fonts'))
+    .pipe(notify({ message: 'Successfully processed font' }));
 });
 
 // Rimraf
