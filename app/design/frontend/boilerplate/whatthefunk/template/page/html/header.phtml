@@ -28,8 +28,6 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-<div class="fullwidth" id="wtf-header">
-<div class="container">
     <header role="banner">
         <?php if ($this->getIsHomePage()):?>
         <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
@@ -50,6 +48,4 @@
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </header>
-</div>
-</div>
 <?php echo $this->getChildHtml('topMenu') ?>

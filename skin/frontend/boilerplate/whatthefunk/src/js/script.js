@@ -39,23 +39,23 @@
  		start: function() {
  			var me = this;
 
- 			/*$(window).load(function() {
- 				me.windowLoaded = true;
- 			});*/
+ 			// $(window).load(function() {
+ 			// 	me.windowLoaded = true;
+ 			// });
 
- 			$(window).on('load', function() { 
- 				me.windowLoaded = true;
- 			});
+$(window).on('load', function() { 
+   me.windowLoaded = true;
+});
 
- 			this.attach();
- 		},
+this.attach();
+},
 
- 		attach: function() {
- 			this.attachBootstrapPrototypeCompatibility();
- 			this.attachMedia();
- 		},
+attach: function() {
+    this.attachBootstrapPrototypeCompatibility();
+    this.attachMedia();
+},
 
- 		attachBootstrapPrototypeCompatibility: function() {
+attachBootstrapPrototypeCompatibility: function() {
 
             // Bootstrap and Prototype don't play nice, in the sense that
             // prototype is a really wacky horrible library. It'll
@@ -100,5 +100,7 @@
     	var site = new Site();
     	site.start();
     });
+
+
 
 })(jQuery);

@@ -34,9 +34,12 @@
     <?php echo $this->getChildHtml('head') ?>
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
-
+<div id="wtf-header" class="fullwidth">
+<div class="container">
     <?php echo $this->getChildHtml('after_body_start') ?>
     <?php echo $this->getChildHtml('header') ?>
+    </div>
+    </div>
 <div class="fullwidth">
     <div class="container">
         <?php echo $this->getChildHtml('global_notices') ?>

@@ -1,0 +1,39 @@
+header[role=banner]{
+	margin-top: 5px;
+}
+
+#wtf-header{
+	background-image: url(../images/skyline.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	position: relative;
+
+	&:before{
+		content:'';
+		position: absolute;
+		top:0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+&.wtf-full-header{
+	background-image: url(../images/concert.jpg);
+
+	&:before{
+		content:'';
+		position: absolute;
+		top:0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(120, 55, 29, 0.5);
+	}
+}
+}
+// WTF Full Header
+
+

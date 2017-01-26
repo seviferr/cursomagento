@@ -75,7 +75,8 @@ gulp.task('js', function() {
     'bower_components/bootstrap/js/carousel.js',
     'bower_components/bootstrap/js/dropdown.js',
     'bower_components/bootstrap/js/modal.js',
-    'src/js/script.js'
+    'src/js/script.js',
+    'src/js/wtf-script.js'
   ];
 
   if (config.appendLiveReload === true) {
