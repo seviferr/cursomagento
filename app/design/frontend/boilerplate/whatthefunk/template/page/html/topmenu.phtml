@@ -32,7 +32,7 @@
 ?>
 <?php $_menu = $this->getHtml('level-top') ?>
 <?php if ($_menu): ?>
-<div class="fullwidth" id="wtf-topmenu">
+<div id="wtf-topmenu">
     <div class="container">
         <nav class="navbar navbar-default navbar-main" role="navigation">
             <div class="navbar-header">
@@ -52,7 +52,13 @@
                     <?php echo $_menu ?>
                 </ul>
             </div>
+
+            <div>
+                <div class="col-xs-4"><?php echo $this->getChildHtml('topLinks') ?></div>
+            </div>
         </nav>
+
+
     </div>
     </div>
 <?php endif ?>

@@ -22,6 +22,17 @@
 
 @import "@{bootstrap-path}/type.less";
 
+@font-face {
+  font-family: 'Gotham';
+  src: url('@{font-path}@{font-name}.eot');
+  src: url('@{font-path}@{font-name}.eot?#iefix') format('embedded-opentype'),
+  url('@{font-path}@{font-name}.woff2') format('woff2'),
+  url('@{font-path}@{font-name}.woff') format('woff'),
+  url('@{font-path}@{font-name}.ttf') format('truetype'),
+  url('@{font-path}@{font-name}.svg#@{font-name}') format('svg');
+}
+
+
 h1, .h1 { font-size: floor(@font-size-base * 1.8); }
 h2, .h2 { font-size: floor(@font-size-base * 1.6); }
 h3, .h3 { font-size: ceil(@font-size-base * 1.4); }
@@ -50,7 +61,13 @@ h6, .h6 { font-size: ceil(@font-size-base * 0.85); }
   h1, h2, h3,
   h4, h5, h6 {
     float: left;
+
   }
+}
+
+h1, h2, h3, h4, h5, h6{
+      margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .subtitle,

@@ -40,15 +40,23 @@
 		<?php echo $this->getChildHtml('header') ?>
 	</div>
 
+	<div class="container text-center">
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('homepage_headercontent')->toHtml(); ?>
+	</div>
+
 </div>
-<div class="fullwidth">
+<div class="fullwidth container-fluid" id="homepage-content">
+
 
 	<?php echo $this->getChildHtml('global_notices') ?>
-
+		
+<div class="row">
 	<div role="main">
-		<?php echo $this->getChildHtml('global_messages') ?>
-		<?php echo $this->getChildHtml('content') ?>
+			<?php echo $this->getChildHtml('global_messages') ?>
+			<?php echo $this->getChildHtml('content') ?>
 	</div>
+		
+</div>
 
 
 

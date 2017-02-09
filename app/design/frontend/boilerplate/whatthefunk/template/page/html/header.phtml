@@ -28,24 +28,49 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-    <header role="banner">
+<header role="banner">
+    <div class="header-top row">
         <?php if ($this->getIsHomePage()):?>
-        <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
-        <?php else:?>
-        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
-        <?php endif?>
-        <div class="quick-access">
-            <div class="row">
+        <h1 class="logo col-md-4"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+    <?php else:?>
+    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+<?php endif?>
 
-                <div class="col-xs-4"><?php echo $this->getChildHtml('topLinks') ?></div>
+<div class="quick-access">
+    <div class="dropdown pull-right">
+     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <?php echo $this->__('My Account') ?>
+        <span class="caret"></span>
+    </button>
+    <?php echo $this->getChildHtml('topLinks') ?>
 
-                <div class="col-xs-4"><?php echo $this->getChildHtml('store_language') ?></div>
+</div>
 
-                <div class="col-xs-4"><?php echo $this->getChildHtml('topSearch') ?></div>
-            
-            </div>
-            <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
-        </div>
-        <?php echo $this->getChildHtml('topContainer'); ?>
-    </header>
-<?php echo $this->getChildHtml('topMenu') ?>
+
+
+
+<!-- <div class="col-xs-4"><?php echo $this->getChildHtml('topSearch') ?></div> - -->
+
+
+<!-- <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p> -->
+</div>
+</div>
+
+
+
+<div class="header-nav row" id="wtf-topmenu">
+
+    <div class="row">
+        <div class="col-sm-8"><?php echo $this->getChildHtml('topMenu') ?></div>
+        <div class="col-xs-4"><?php echo $this->getChildHtml('store_language') ?></div>
+    </div>
+
+
+
+</div>
+
+
+<?php echo $this->getChildHtml('topContainer'); ?>
+
+
+</header>

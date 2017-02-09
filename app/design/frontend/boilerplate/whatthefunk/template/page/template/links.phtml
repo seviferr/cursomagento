@@ -30,20 +30,17 @@
  */
 ?>
 <?php $_links = $this->getLinks(); ?>
+<?php $parent = $this->getParentBlock(); ?>
 <?php if(count($_links)>0): ?>
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <?php echo $this->__('My Account') ?>
-    <span class="caret"></span>
-  </button>
- <ul class="dropdown-menu links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>>
-    <?php foreach($_links as $_link): ?>
+    
+    <ul class="<?php echo ($parent->getNameInLayout() === 'header') ? 'dropdown-menu' : '' ?> links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>>
+        <?php foreach($_links as $_link): ?>
         <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
-            <?php echo $_link->toHtml() ?>
-        <?php else: ?>
-            <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
-        <?php endif;?>
-    <?php endforeach; ?>
+        <?php echo $_link->toHtml() ?>
+    <?php else: ?>
+    <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+<?php endif;?>
+<?php endforeach; ?>
 </ul>
-</div>
+
 <?php endif; ?>

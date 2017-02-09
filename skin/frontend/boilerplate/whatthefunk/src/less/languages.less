@@ -21,13 +21,26 @@
 // THE SOFTWARE.
 
 .form-language {
-  margin-bottom: (@line-height-computed / 2);
+	margin-bottom: (@line-height-computed / 2);
+	margin-top: (@line-height-computed / 2);
 
-  label {
-    display: none;
-  }
+	label {
+		display: none;
+	}
 
-  select {
-    &:extend(.form-control);
-  }
+	select {
+		&:extend(.form-control);
+		background-color: transparent;
+		border: 0px;
+		color: white;
+		box-shadow: none;
+		// border-bottom: 1px solid white;
+		border-radius: 0px;
+		cursor: pointer;
+
+		option{
+			background-color: white;
+			color: #333;
+		}
+	}
 }

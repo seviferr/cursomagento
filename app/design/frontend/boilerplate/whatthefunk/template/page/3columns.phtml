@@ -35,12 +35,12 @@
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <div id="wtf-header" class="fullwidth">
-<div class="container">
-    <?php echo $this->getChildHtml('after_body_start') ?>
-    <?php echo $this->getChildHtml('header') ?>
+    <div class="container">
+        <?php echo $this->getChildHtml('after_body_start') ?>
+        <?php echo $this->getChildHtml('header') ?>
     </div>
-    </div>
-<div class="fullwidth">
+</div>
+<div id="wtf-maincontent" class="fullwidth">
     <div class="container">
         <?php echo $this->getChildHtml('global_notices') ?>
         <?php echo $this->getChildHtml('breadcrumbs') ?>
@@ -59,9 +59,9 @@
         </div>
     </div>
 </div>
-    <?php echo $this->getChildHtml('footer') ?>
-    <?php echo $this->getChildHtml('before_body_end') ?>
-    <?php echo $this->getAbsoluteFooter() ?>
+<?php echo $this->getChildHtml('footer') ?>
+<?php echo $this->getChildHtml('before_body_end') ?>
+<?php echo $this->getAbsoluteFooter() ?>
 
 </body>
 </html>

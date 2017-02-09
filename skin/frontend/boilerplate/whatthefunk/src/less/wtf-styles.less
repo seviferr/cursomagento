@@ -3,6 +3,12 @@ header[role=banner]{
 }
 
 #wtf-header{
+
+	
+
+
+
+
 	background-image: url(../images/skyline.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -16,24 +22,140 @@ header[role=banner]{
 		left: 0;
 		bottom: 0;
 		right: 0;
-		background-color: rgba(0, 0, 0, 0.1);
-}
-
-
-&.wtf-full-header{
-	background-image: url(../images/concert.jpg);
-
-	&:before{
-		content:'';
-		position: absolute;
-		top:0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		background-color: rgba(120, 55, 29, 0.5);
+		background-color: rgba(0, 0, 0, 0.34);
 	}
-}
+
+
+
+
+
+	#homepage-headercontent{
+		position: absolute;
+		left: 8%;
+		right: 8%;
+		top:30%;
+		text-align: center;
+
+
+		z-index: 10;
+
+		color:white;
+
+		p{
+			font-size: 20px;
+			margin-bottom: 38px;
+			strong{
+				font-size: 30px;
+			}
+
+			.glyphicon:before{
+				font-size: 44px;
+			}
+
+		}
+
+	}
+
+
+	&.wtf-full-header{
+		background-image: url(../images/concert.jpg);
+
+		&:before{
+			content:'';
+			position: absolute;
+			top:0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: rgba(91, 86, 83, 0.5);
+		}
+	}
 }
 // WTF Full Header
 
 
+#homepage-content{
+
+	div[role=main]{
+		.make-md-column(12);
+		padding: 0px;
+		margin-bottom: 0px;
+	}
+
+
+	#homepage-section0{
+		.teaser{
+			height: 380px;
+			background-image: url(../images/girlplaying.jpg);
+			background-size: 51%;
+			background-repeat: no-repeat;
+			padding-left: 47%;
+			text-align: center;
+			  background-position: left bottom;
+			padding-top: 100px;
+
+			h3{
+				font-size: 20px;
+				font-weight: bold;
+				font-size: 38px;
+				text-transform: uppercase;
+				padding-bottom: 20px;
+				border-bottom: 1px solid rgba(128, 128, 128, 0.38);
+				width: 69%;
+				margin: 0px auto 34px;
+			}
+
+			>p{
+				max-width: 439px;
+				margin: auto;
+			}
+
+		}
+	}
+
+	#homepage-section1{
+	  text-align: center;
+  background-image: url(../images/musicstuff.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 432px;
+  position: relative;
+		
+		h3{
+  font-weight: 700;
+  font-size: 38px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(192, 192, 192, 0.78);
+  margin: 0 auto 34px;
+  display: inline-block;
+		}
+
+		> p{
+			
+		}
+
+		.vcenter{
+			  position: absolute;
+  top: 20%;
+  left: 8%;
+  right: 8%;
+  font-size: 17px;
+  line-height: 32px;
+		}
+
+	}
+
+}
+
+#wtf-footer{
+	  padding: 20px 10px;
+  background: #201f1f;
+  color: white;
+}
+
+
+#wtf-maincontent{
+	padding-top: 20px;
+}
